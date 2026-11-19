@@ -1,0 +1,2 @@
+# Keep blank issues available for development tasks; the Feedback form is the default for everyone else.
+blank_issues_enabled: true

@@ -1,0 +1,79 @@
+name: Feedback
+description: Something broken, confusing, or an idea. Include a screenshot or a screen recording.
+title: "Feedback: "
+labels: ["feedback", "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Short is fine. A picture usually says more than a paragraph.
+
+        **Screenshot on iPhone:** press the side button and volume up together.
+        **Screen recording:** add Screen Recording in Settings › Control Center, then start it from Control Center.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of feedback is this?
+      options:
+        - Something is broken or wrong
+        - Something is confusing or hard to use
+        - An idea or design suggestion
+    validations:
+      required: true
+
+  - type: input
+    id: where
+    attributes:
+      label: Where in the app?
+      description: The screen or what you were doing.
+      placeholder: "e.g. Posting an ask, a group's page, Find groups"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, or what's your idea?
+      placeholder: "e.g. I tapped “I can help” and nothing happened."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+      description: Skip this for ideas.
+      placeholder: "e.g. I expected to see that the poster was notified."
+
+  - type: textarea
+    id: media
+    attributes:
+      label: Screenshot or screen recording
+      description: |
+        Drag and drop files here, or click the box and paste. For ideas, a photo of a sketch, a Figma link,
+        or a screenshot of another app you like works too. Long videos may be too big to upload; trim them,
+        or paste a share link instead.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: build
+    attributes:
+      label: What were you using?
+      options:
+        - The iPhone app (TestFlight)
+        - The prototype
+        - A Figma design
+        - Something else
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: Phone and iOS version (if it's about the app)
+      description: Settings › General › About.
+      placeholder: "e.g. iPhone 15, iOS 26.1"
+    validations:
+      required: false
